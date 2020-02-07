@@ -1,5 +1,5 @@
 {% set name = "spvcm" %}
-{% set version = "0.2.1.post1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1a1a38541dfa788345655ec0ed59da5e79982a2ce409bad79caf3ca0083cf9ec
+  sha256: ce331bd5d6bcb64a07c4393093f3978763cfc8764ad0737e1866f3905e6cceae
 
 build:
   noarch: python
