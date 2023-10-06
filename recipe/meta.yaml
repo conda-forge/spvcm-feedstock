@@ -46,7 +46,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - martinfleis
+    - jGaboardi
     - knaaptime
-    - sjsrey
     - ljwolf
+    - martinfleis
+    - sjsrey
