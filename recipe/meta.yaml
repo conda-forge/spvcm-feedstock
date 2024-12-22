@@ -6,20 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ce331bd5d6bcb64a07c4393093f3978763cfc8764ad0737e1866f3905e6cceae
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
+    - setuptools >=61.0
+    - setuptools-scm >=6.2
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - numpy 
     - scipy
     - libpysal
@@ -28,6 +30,8 @@ requirements:
     - seaborn
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - spvcm
 
